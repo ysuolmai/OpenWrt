@@ -77,7 +77,7 @@ jobs:
       uses: klever1988/cachewrtbuild@main
       with:
         ccache: 'true'
-        prefix: $OPENWRT_PATH
+        prefix: ${{ github.workspace }}/openwrt
       
     - name: Generate Variables
       run: |
