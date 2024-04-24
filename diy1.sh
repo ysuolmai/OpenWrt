@@ -39,6 +39,10 @@ git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app
 #DDNS-go
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
+#luci-app-zerotier
+git clone https://github.com/rufengsuixing/luci-app-zerotier.git
+
+
 # iStore
 #git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
 #git_sparse_clone main https://github.com/linkease/istore luci
