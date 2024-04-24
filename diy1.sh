@@ -40,7 +40,7 @@ git clone --depth=1 -b main https://github.com/fw876/helloworld package/luci-app
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
 #luci-app-zerotier
-git clone https://github.com/rufengsuixing/luci-app-zerotier.git
+git clone https://github.com/rufengsuixing/luci-app-zerotier.git package/luci-app-zerotier
 
 
 # iStore
