@@ -53,6 +53,20 @@ git clone https://github.com/rufengsuixing/luci-app-zerotier.git package/luci-ap
 #sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
 #chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 
+
+#process .config file
+sed -i '/\busb\b/d' .config
+sed -i '/\bpasswall\b/d' .config
+sed -i '/\bv2ray\b/d' .config
+sed -i '/\bsing-box\b/d' .config
+sed -i '/\bSINGBOX\b/d' .config
+#sed -i '/\b\b/d' .config
+#sed -i '/\b\b/d' .config
+#sed -i '/\b\b/d' .config
+
+
+
+
 provided_config_lines=(
 "CONFIG_PACKAGE_luci-app-ssr-plus=y"
 "CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-openssl=y"
