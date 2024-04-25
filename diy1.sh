@@ -53,5 +53,31 @@ git clone https://github.com/rufengsuixing/luci-app-zerotier.git package/luci-ap
 #sed -i '$i uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
 #chmod 755 package/luci-app-onliner/root/usr/share/onliner/setnlbw.sh
 
+provided_config_lines=(
+"CONFIG_PACKAGE_luci-app-ssr-plus=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_libustream-openssl=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS=y"
+"CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs=y"
+"CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=y"
+"CONFIG_PACKAGE_luci-app-zerotier=y"
+"CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y"
+"CONFIG_PACKAGE_luci-app-adguardhome=y"
+"CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y"
+)
+
+# Path to the .config file
+config_file_path=".config" 
+
+# Append lines to the .config file
+for line in "${provided_config_lines[@]}"; do
+    echo "$line" >> "$config_file_path"
+done
+
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
