@@ -64,7 +64,7 @@ sed -i '/\bqihoo_v6\b/d' .config
 sed -i '/\bredmi_ax5=y\b/d' .config
 sed -i '/\bxiaomi_ax3600\b/d' .config
 sed -i '/\bxiaomi_ax9000\b/d' .config
-sed -i '/\bjdc_ax1800_pro\b/d' .config
+sed -i '/\bjdc_ax1800-pro\b/d' .config
 sed -i '/\bxiaomi_ax1800\b/d' .config
 sed -i '/\bcmiot_ax18\b/d' .config
 
